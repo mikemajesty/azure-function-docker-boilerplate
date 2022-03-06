@@ -30,7 +30,7 @@ $ npm run deploy:dev
 # Use VSCODE extension
 ```
 
-
+---
 
 The following is a list of all the people that have contributed to nest-boilerplate. Thanks for your contributions!
 
