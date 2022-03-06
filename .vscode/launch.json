@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Node Functions",
+      "type": "node",
+      "env": {
+        "APPINSIGHTS_INSTRUMENTATIONKEY": "<APPINSIGHTS_INSTRUMENTATIONKEY>"
+      },
+      "request": "attach",
+      "port": 9229,
+      "preLaunchTask": "func: host start"
+    }
+  ]
+}

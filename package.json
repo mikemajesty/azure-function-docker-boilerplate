@@ -1,0 +1,26 @@
+{
+  "name": "docker",
+  "version": "0.0.2",
+  "description": "docker",
+  "engines": {
+    "node": "16.13.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "remove": "rm -rf node_modules && rm -rf dist && rm -rf *.lock* && npm i && yarn build && yarn commit",
+    "commit": "git add -A && git commit -m \"initial commit\"",
+    "set:node": "az functionapp config set --linux-fx-version \"node|16\" --name <ApP_NAME> --resource-group <RESOURCE_NAME>",
+    "deploy:dev": "func azure functionapp publish <APP_NAME> --build remote --force",
+    "prestart": "npm run build",
+    "start": "func start --port 8091"
+  },
+  "author": "",
+  "devDependencies": {
+    "@azure/functions": "^3.0.0",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "applicationinsights": "^2.2.2"
+  }
+}
